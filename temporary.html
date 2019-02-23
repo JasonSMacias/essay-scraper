@@ -1,0 +1,2185 @@
+<!-- Temporary html of target scrape page for reference -->
+<!DOCTYPE html>
+<html dir='ltr' lang='en'>
+
+<head>
+  <meta charset='utf-8'>
+  <script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"e79083cdd8","applicationID":"71306850","transactionName":"e15bR0tdXVtUSh9QR0tQTEAWW19TVEA=","queueTime":1,"applicationTime":17,"agent":""}</script>
+  <script>(window.NREUM||(NREUM={})).loader_config={xpid:"VQYOV1NUCxAHVVJSAQkCVg=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(16),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(17),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,v="fn"+h,w="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(v,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(v,function(t,n){i(w,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(19)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(19)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(19)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(19)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):v?v(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(19)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!v&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(16),s=t(17),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],16:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],17:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],18:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],19:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(17),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[g[e]];return d&&d.push([b,e,r,a]),a}}function p(t,n){y[t]=m(t).concat(n)}function h(t,n){var e=y[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return y[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",g[e]=n,n in u||(u[n]=[])})}var y={},g={},b={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return b}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(16),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=x.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+x.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+x.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-x.offset}var s=(new Date).getTime(),c=t("handle"),f=t(16),u=t("ee"),d=t(15),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var y=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1118.min.js"},b=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),x=n.exports={offset:s,now:a,origin:y,features:{},xhrWrappable:b,userAgent:d};t(12),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(18)},{}]},{},["loader",2,10,4,3]);</script>
+  <meta content='width=device-width, minimum-scale=1, initial-scale=1' name='viewport'>
+  <meta content='yes' name='apple-mobile-web-app-capable'>
+  <meta content='black' name='apple-mobile-web-app-status-bar-style'>
+  <meta content='430086400490662' property='fb:app_id'>
+  <meta content='Aeon' property='og:site_name'>
+  <meta content='@aeonmag' property='twitter:site'>
+  <link href='https://aeon.co/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+  <meta content='index, follow' name='robots'>
+  <link href='https://aeon.co/essays' rel='canonical'>
+  <meta content='Aeon is a magazine of ideas and culture. We publish in-depth essays, incisive articles, and a mix of original and curated videos — free to all.'
+    name='description'>
+  <meta content='Aeon Essays' property='og:title'>
+  <meta content='Aeon is a magazine of ideas and culture. We publish in-depth essays, incisive articles, and a mix of original and curated videos — free to all.'
+    property='og:description'>
+  <meta content='https://aeon.co/essays' property='og:url'>
+  <meta content='Aeon Essays' property='twitter:title'>
+  <meta content='Aeon is a magazine of ideas and culture. We publish in-depth essays, incisive articles, and a mix of original and curated videos — free to all.'
+    property='twitter:description'>
+
+
+  <title>Aeon Essays</title>
+  <link rel="stylesheet" media="all" href="https://alpha.aeon.co/assets/application-915e49f823873f4bb74a0969ce6623c8401f4d07baa90afee19073c03cdbbb61.css" />
+  <meta name="csrf-param" content="authenticity_token" />
+  <meta name="csrf-token" content="2svOkilX86WIW3RiIPcg6P/lbIHRiR6rZkbAZMYPfp7Uzs5kkvSDImwnxGDC03Ds+7K/hCO7QeIdNokyUNsFqA==" />
+  <script>
+    window.Aeon = {}
+  window.Aeon.Data = {}
+  window.Aeon.Environment = "production"
+  window.Aeon.Friend = false
+  window.Aeon.SignInUrl = "https://aeon.co/sign-in"
+</script>
+
+  <script>
+    if (window.location.host !== 'aeon.co') {
+    window.location.href = 'https://aeon.co'
+  }
+</script>
+  <script>
+    if (window.top !== window.self) {
+    window.top.onbeforeunload = function () {}
+    window.top.location.href = window.self.location.href
+  }
+</script>
+
+</head>
+
+<body class='essays index header-banner--friends '>
+  <div class='header-banner-friends'>
+    <div class='container'>
+      <div class='header-banner-friends__left'>
+        <div class='header-banner-friends__inner'>
+          <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/assets/friend-badge-bright-d90fc4b950b9503b98bdd1c68271a79b31433864eb81d59f080c0c739b6c4ec5.svg&#39;)'>
+            <div class='sizer__wrapper'>
+              <div class='sizer'></div>
+            </div>
+          </figure>
+
+        </div>
+        <div class='header-banner-friends__inner'>
+          <h2><span class='header-banner-friends--highlight'>Friends of Aeon</span> donate as little as US$5 <br />a
+            month and enjoy exclusive benefits.</h2>
+          <p>Save and annotate your favourite articles, engage with Aeon <br />editors and receive our monthly ebook
+            for easy offline reading.</p>
+          <p class='header-banner-friends__actions'>
+            <a class='header-banner-friends__big-button' href='https://aeon.co/friends?utm_medium=web&amp;utm_source=header-friends-banner'>Become
+              a Friend now</a>
+          </p>
+        </div>
+      </div>
+      <div class='header-banner-friends__right'>
+        <h2>Aeon is <span class='header-banner-friends--highlight'>not-for-profit</span> and needs <br />your support.</h2>
+        <p class='header-banner-friends__actions'>
+          <a class='header-banner-friends__big-button' href='https://aeon.co/friends?utm_medium=web&amp;utm_source=header-friends-banner'>Become
+            a Friend now</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class='menu'>
+    <div class='container menu__close__container'>
+      <a class='menu__close' href='#' onclick='document.body.classList.remove(&#39;menu--open&#39;); return false;'>
+        Close
+        <span class='close__icon'><svg width="18" height="18" viewBox="0 0 24 24">
+            <g fill="currentColor">
+              <path d="M16.95 5.636l1.414 1.414L7.05 18.364 5.636 16.95z"></path>
+              <path d="M16.95 18.364l1.414-1.414L7.05 5.636 5.636 7.05z"></path>
+            </g>
+          </svg>
+        </span>
+      </a>
+    </div>
+    <div class='container menu__navigation'>
+      <div class='col'>
+        <div class='gutter'>
+          <nav class='menu__navigation__group'>
+            <a class='section--philosophy' href='https://aeon.co/philosophy'>Philosophy</a>
+            <a class='section--science' href='https://aeon.co/science'>Science</a>
+            <a class='section--psychology' href='https://aeon.co/psychology'>Psychology</a>
+            <a class='section--health' href='https://aeon.co/health'>Health</a>
+            <a class='section--society' href='https://aeon.co/society'>Society</a>
+            <a class='section--technology' href='https://aeon.co/technology'>Technology</a>
+            <a class='section--culture' href='https://aeon.co/culture'>Culture</a>
+          </nav>
+        </div>
+      </div>
+      <div class='col'>
+        <div class='gutter'>
+          <nav class='menu__navigation__group'>
+            <a class='menu--mobile-toggle' href='https://aeon.co/about'>About</a>
+            <a class='menu--mobile-toggle menu--mobile-break' href='https://aeon.co/donate?utm_medium=web&amp;utm_source=menu-mobile'>Donate</a>
+            <a href='https://aeon.co/essays'>Essays</a>
+            <a href='https://aeon.co/ideas'>Ideas</a>
+            <a href='https://aeon.co/classics'>Classics</a>
+            <a href='https://aeon.co/videos'>Videos</a>
+            <a href='https://aeon.co/partners'>Partners</a>
+            <a class='menu--mobile-toggle menu--mobile-bottom' href='#' onclick='document.body.classList.toggle(&#39;modal-newsletter--open&#39;); return false;'>Newsletter</a>
+          </nav>
+        </div>
+      </div>
+      <div class='col'>
+        <div class='gutter'>
+          <nav class='menu__navigation__group'>
+            <a class='menu--mobile-toggle' href='https://aeon.co/about'>About</a>
+            <a class='menu--mobile-toggle' href='https://aeon.co/donate?utm_medium=web&amp;utm_source=menu'>Donate</a>
+            <a class='menu--mobile-toggle' href='#' onclick='document.body.classList.toggle(&#39;modal-newsletter--open&#39;); return false;'>Newsletter</a>
+            <div class='menu__social-wrapper'>
+              <a href='https://www.facebook.com/AeonMagazine' target='_blank'>
+                <span class='menu__navigation__group__icon'><svg viewBox="0 0 16 16" fill="currentColor" fill-rule="evenodd"
+                    clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                    <path d="M15.117 0H.883C.395 0 0 .395 0 .883v14.234c0 .488.395.883.883.883h7.663V9.804H6.46V7.39h2.086V5.607c0-2.066 1.262-3.19 3.106-3.19.883 0 1.642.064 1.863.094v2.16h-1.28c-1 0-1.195.48-1.195 1.18v1.54h2.39l-.31 2.42h-2.08V16h4.077c.488 0 .883-.395.883-.883V.883C16 .395 15.605 0 15.117 0"
+                      fill-rule="nonzero"></path>
+                  </svg>
+                </span>
+                <span class='menu__navigation__group__text'>Facebook</span>
+              </a>
+            </div>
+            <div class='menu__social-wrapper'>
+              <a href='https://twitter.com/aeonmag' target='_blank'>
+                <span class='menu__navigation__group__icon'><svg viewBox="0 0 16 16" fill="currentColor" fill-rule="evenodd"
+                    clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+                    <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
+                      fill-rule="nonzero"></path>
+                  </svg>
+                </span>
+                <span class='menu__navigation__group__text'>Twitter</span>
+              </a>
+            </div>
+            <div class='menu__social-wrapper'>
+              <a href='https://www.instagram.com/aeonmag' target='_blank'>
+                <span class='menu__navigation__group__icon'><svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"></path>
+                  </svg>
+                </span>
+                <span class='menu__navigation__group__text'>Instagram</span>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div class='container'>
+      <div class='gutter'>
+        <div class='menu__search'>
+          <form class="menu__search__form" action="https://aeon.co/search" accept-charset="UTF-8" method="get"><input
+              name="utf8" type="hidden" value="&#x2713;" />
+            <span class='search__icon'><svg xmlns="http://www.w3.org/2000/svg" width="15.44" height="15.441" viewBox="-0.449 -0.658 15.44 15.441">
+                <circle fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" cx="5.974" cy="5.765"
+                  r="3.482"></circle>
+                <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" d="M8.436 8.228l3.446 3.5"></path>
+              </svg>
+            </span>
+            <input class='menu__search__input' id='menu__search__input' name='q' placeholder='Search' type='search'>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class='menu__close-cover' href='#' onclick='document.body.classList.remove(&#39;menu--open&#39;); return false;'></a>
+
+  <header class='header header--top'>
+    <div class='container header__container'>
+      <a class="header__logo__link" href="https://aeon.co/"><svg xmlns="http://www.w3.org/2000/svg" width="174.65"
+          height="61.413" viewBox="-14.554 -5.118 174.65 61.413" class="header__logo">
+          <g fill="#9D1D20">
+            <path d="M70.93 25.275c0 11.705 8.43 21.268 18.755 21.268 10.57 0 19.002-9.438 19.002-21.268 0-11.45-8.432-20.642-18.877-20.642-10.45 0-18.88 9.19-18.88 20.642m48.05.252c0 16.504-13.052 29.81-29.17 29.81-16.12 0-29.17-13.306-29.17-29.81 0-16.377 13.05-29.683 29.17-29.683 16.247 0 29.17 13.177 29.17 29.683M45.39 19.563c0-6.435-.266-10.854-.795-13.252-.525-2.398-1.35-4.217-2.47-5.456-.635-.72-1.48-1.08-2.535-1.08-1.575 0-2.856 1.02-3.853 3.06-1.782 3.56-2.674 8.435-2.674 14.63v2.1H45.39m11.146 4.017H33.29c.272 7.435 1.77 13.31 4.487 17.63 2.083 3.32 4.59 4.976 7.52 4.976 1.81 0 3.458-.673 4.936-2.01 1.485-1.34 3.07-3.75 4.76-7.225l1.544 1.322c-2.296 6.2-4.837 10.582-7.613 13.163-2.778 2.575-5.994 3.87-9.653 3.87-6.284 0-11.04-3.197-14.273-9.594C22.4 40.554 21.1 34.157 21.1 26.526c0-9.354 1.912-16.8 5.734-22.338 3.82-5.538 8.3-8.305 13.436-8.305 4.288 0 8.01 2.327 11.168 6.986 3.156 4.653 4.854 11.56 5.098 20.713M4.668 26.974c-6.007 2.037-9.014 5.404-9.014 9.97v4.566c0 2.88 1.323 5.046 3.967 5.046 2.883 0 5.048-2.524 5.048-5.648V26.974M14.876 55.32c-3.724 0-6.605-1.923-7.807-6.243C4.903 53.16 1.18 55.32-3.265 55.32c-6.725 0-11.29-5.165-11.29-14.05V38.5c0-10.572 8.168-15.615 19.223-19.7v-8.89c0-2.882-1.203-4.564-3.967-4.564-2.884 0-3.846 1.682-3.846 4.806V15.2h-9.73v-4.564c0-8.53 4.686-14.776 14.055-14.776 9.37 0 13.816 6.486 13.816 15.618V44.39c0 1.805.724 2.766 2.4 2.886v8.046h-2.522zM156.496 52.825v-39.79c0-7.597-.514-10.944-2.31-13.522-1.163-2.058-2.833-2.96-5.022-2.96-1.928 0-3.863 1.03-6.176 3.605-2.24 2.243-5.352 6.04-7.246 8.842.742-4.152.684-14.118.684-14.118-6.56 3.86-9.902 4.893-16.207 5.15V1.19c1.925.515 2.57.643 4.243 1.415.127 4.25.127 7.34.127 8.11v10.946l-.127 10.944V45.23c0 2.958 0 4.12-.127 7.596-1.416 1.283-1.93 1.413-3.73 2.184v1.285h18.78V55.01c-1.67-.774-2.187-1.028-3.474-2.184V10.973l.64-.64c2.063-1.933 3.99-3.092 5.28-3.092 2.697 0 3.47 2.06 3.47 8.5v37.085c-1.54 1.155-2.058 1.413-3.856 2.182v1.287h18.65v-1.542c-1.8-.643-2.315-.9-3.6-1.927"></path>
+          </g>
+        </svg>
+
+      </a>
+      <nav class='header__left'>
+        <a class='header__left__menu-trigger' href='#' onclick='document.body.classList.toggle(&#39;menu--open&#39;); return false;'>Menu</a>
+        <span class='header__separator separator'>&nbsp;/&nbsp;</span>
+        <span class='header__search'>
+          <a class='header__search-trigger' href='#' onclick='document.body.classList.toggle(&#39;menu--open&#39;); document.querySelector(&#39;.menu__search__input&#39;).focus(); return false;'>
+            <span class='header__search-icon'><svg xmlns="http://www.w3.org/2000/svg" width="15.44" height="15.441"
+                viewBox="-0.449 -0.658 15.44 15.441">
+                <circle fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" cx="5.974" cy="5.765"
+                  r="3.482"></circle>
+                <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" d="M8.436 8.228l3.446 3.5"></path>
+              </svg>
+            </span>
+          </a>
+        </span>
+      </nav>
+      <nav class='header__right'>
+        <div class='header__social-icons social-hovers'>
+          <div class='social-hovers__item'>
+            <span class='fb-like' data-action='like' data-href='https://facebook.com/AeonMagazine' data-layout='button_count'
+              data-share='false' data-show-faces='false'></span>
+            <a target="_blank" class="header__social-icon--facebook" href="https://www.facebook.com/AeonMagazine"><span><svg
+                  viewBox="0 0 512 512" fill="currentColor">
+                  <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+                </svg>
+              </span>
+            </a></div>
+          <div class='social-hovers__item'>
+            <a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/aeonmag'></a>
+            <a target="_blank" class="header__social-icon--twitter" href="https://twitter.com/aeonmag"><span><svg
+                  viewBox="0 0 16 16" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                  stroke-miterlimit="1.414">
+                  <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
+                    fill-rule="nonzero"></path>
+                </svg>
+              </span>
+            </a></div>
+          <div class='social-hovers__item'>
+            <a target="_blank" class="header__social-icon--instagram" href="https://www.instagram.com/aeonmag"><span><svg
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"></path>
+                </svg>
+              </span>
+            </a></div>
+        </div>
+        <div class='header__donate'>
+          <a href="https://aeon.co/donate?utm_medium=web&amp;utm_source=top-bar">Donate</a>
+          <span class='header__separator separator'>/&nbsp;</span>
+        </div>
+        <div class='header__newsletter'>
+          <a href='#' onclick='document.body.classList.toggle(&#39;modal-newsletter--open&#39;); return false;'>
+            Newsletter
+          </a>
+        </div>
+        <span class='header__separator separator'>&nbsp;/</span>
+        <div class='header__user header__user--anonymous'>
+          <div class='user-nav'>
+            <a class='header__sign-in' href='https://aeon.co/sign-in' title='Sign In'>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <g>
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"></path>
+                </g>
+              </svg>
+
+              <span>Sign In</span>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <header class='header header--fixed'>
+    <div class='container header__container'>
+      <a class="header__logo__link" href="https://aeon.co/"><svg xmlns="http://www.w3.org/2000/svg" width="174.65"
+          height="61.413" viewBox="-14.554 -5.118 174.65 61.413" class="header__logo">
+          <g fill="#9D1D20">
+            <path d="M70.93 25.275c0 11.705 8.43 21.268 18.755 21.268 10.57 0 19.002-9.438 19.002-21.268 0-11.45-8.432-20.642-18.877-20.642-10.45 0-18.88 9.19-18.88 20.642m48.05.252c0 16.504-13.052 29.81-29.17 29.81-16.12 0-29.17-13.306-29.17-29.81 0-16.377 13.05-29.683 29.17-29.683 16.247 0 29.17 13.177 29.17 29.683M45.39 19.563c0-6.435-.266-10.854-.795-13.252-.525-2.398-1.35-4.217-2.47-5.456-.635-.72-1.48-1.08-2.535-1.08-1.575 0-2.856 1.02-3.853 3.06-1.782 3.56-2.674 8.435-2.674 14.63v2.1H45.39m11.146 4.017H33.29c.272 7.435 1.77 13.31 4.487 17.63 2.083 3.32 4.59 4.976 7.52 4.976 1.81 0 3.458-.673 4.936-2.01 1.485-1.34 3.07-3.75 4.76-7.225l1.544 1.322c-2.296 6.2-4.837 10.582-7.613 13.163-2.778 2.575-5.994 3.87-9.653 3.87-6.284 0-11.04-3.197-14.273-9.594C22.4 40.554 21.1 34.157 21.1 26.526c0-9.354 1.912-16.8 5.734-22.338 3.82-5.538 8.3-8.305 13.436-8.305 4.288 0 8.01 2.327 11.168 6.986 3.156 4.653 4.854 11.56 5.098 20.713M4.668 26.974c-6.007 2.037-9.014 5.404-9.014 9.97v4.566c0 2.88 1.323 5.046 3.967 5.046 2.883 0 5.048-2.524 5.048-5.648V26.974M14.876 55.32c-3.724 0-6.605-1.923-7.807-6.243C4.903 53.16 1.18 55.32-3.265 55.32c-6.725 0-11.29-5.165-11.29-14.05V38.5c0-10.572 8.168-15.615 19.223-19.7v-8.89c0-2.882-1.203-4.564-3.967-4.564-2.884 0-3.846 1.682-3.846 4.806V15.2h-9.73v-4.564c0-8.53 4.686-14.776 14.055-14.776 9.37 0 13.816 6.486 13.816 15.618V44.39c0 1.805.724 2.766 2.4 2.886v8.046h-2.522zM156.496 52.825v-39.79c0-7.597-.514-10.944-2.31-13.522-1.163-2.058-2.833-2.96-5.022-2.96-1.928 0-3.863 1.03-6.176 3.605-2.24 2.243-5.352 6.04-7.246 8.842.742-4.152.684-14.118.684-14.118-6.56 3.86-9.902 4.893-16.207 5.15V1.19c1.925.515 2.57.643 4.243 1.415.127 4.25.127 7.34.127 8.11v10.946l-.127 10.944V45.23c0 2.958 0 4.12-.127 7.596-1.416 1.283-1.93 1.413-3.73 2.184v1.285h18.78V55.01c-1.67-.774-2.187-1.028-3.474-2.184V10.973l.64-.64c2.063-1.933 3.99-3.092 5.28-3.092 2.697 0 3.47 2.06 3.47 8.5v37.085c-1.54 1.155-2.058 1.413-3.856 2.182v1.287h18.65v-1.542c-1.8-.643-2.315-.9-3.6-1.927"></path>
+          </g>
+        </svg>
+
+      </a>
+      <nav class='header__left'>
+        <a class='header__left__menu-trigger' href='#' onclick='document.body.classList.toggle(&#39;menu--open&#39;); return false;'>Menu</a>
+        <span class='header__separator separator'>&nbsp;/&nbsp;</span>
+        <span class='header__search'>
+          <a class='header__search-trigger' href='#' onclick='document.body.classList.toggle(&#39;menu--open&#39;); document.querySelector(&#39;.menu__search__input&#39;).focus(); return false;'>
+            <span class='header__search-icon'><svg xmlns="http://www.w3.org/2000/svg" width="15.44" height="15.441"
+                viewBox="-0.449 -0.658 15.44 15.441">
+                <circle fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" cx="5.974" cy="5.765"
+                  r="3.482"></circle>
+                <path fill="none" stroke="currentColor" stroke-width="1.2" stroke-miterlimit="10" d="M8.436 8.228l3.446 3.5"></path>
+              </svg>
+            </span>
+          </a>
+        </span>
+      </nav>
+      <nav class='header__right'>
+        <div class='header__social-icons social-hovers'>
+          <div class='social-hovers__item'>
+            <span class='fb-like' data-action='like' data-href='https://facebook.com/AeonMagazine' data-layout='button_count'
+              data-share='false' data-show-faces='false'></span>
+            <a target="_blank" class="header__social-icon--facebook" href="https://www.facebook.com/AeonMagazine"><span><svg
+                  viewBox="0 0 512 512" fill="currentColor">
+                  <path d="M211.9 197.4h-36.7v59.9h36.7V433.1h70.5V256.5h49.2l5.2-59.1h-54.4c0 0 0-22.1 0-33.7 0-13.9 2.8-19.5 16.3-19.5 10.9 0 38.2 0 38.2 0V82.9c0 0-40.2 0-48.8 0 -52.5 0-76.1 23.1-76.1 67.3C211.9 188.8 211.9 197.4 211.9 197.4z"></path>
+                </svg>
+              </span>
+            </a></div>
+          <div class='social-hovers__item'>
+            <a class='twitter-follow-button' data-show-count='false' data-show-screen-name='false' href='https://twitter.com/aeonmag'></a>
+            <a target="_blank" class="header__social-icon--twitter" href="https://twitter.com/aeonmag"><span><svg
+                  viewBox="0 0 16 16" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round"
+                  stroke-miterlimit="1.414">
+                  <path d="M16 3.038c-.59.26-1.22.437-1.885.517.677-.407 1.198-1.05 1.443-1.816-.634.37-1.337.64-2.085.79-.598-.64-1.45-1.04-2.396-1.04-1.812 0-3.282 1.47-3.282 3.28 0 .26.03.51.085.75-2.728-.13-5.147-1.44-6.766-3.42C.83 2.58.67 3.14.67 3.75c0 1.14.58 2.143 1.46 2.732-.538-.017-1.045-.165-1.487-.41v.04c0 1.59 1.13 2.918 2.633 3.22-.276.074-.566.114-.865.114-.21 0-.41-.02-.61-.058.42 1.304 1.63 2.253 3.07 2.28-1.12.88-2.54 1.404-4.07 1.404-.26 0-.52-.015-.78-.045 1.46.93 3.18 1.474 5.04 1.474 6.04 0 9.34-5 9.34-9.33 0-.14 0-.28-.01-.42.64-.46 1.2-1.04 1.64-1.7z"
+                    fill-rule="nonzero"></path>
+                </svg>
+              </span>
+            </a></div>
+          <div class='social-hovers__item'>
+            <a target="_blank" class="header__social-icon--instagram" href="https://www.instagram.com/aeonmag"><span><svg
+                  viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913a5.885 5.885 0 0 0 1.384 2.126A5.868 5.868 0 0 0 4.14 23.37c.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558a5.898 5.898 0 0 0 2.126-1.384 5.86 5.86 0 0 0 1.384-2.126c.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913a5.89 5.89 0 0 0-1.384-2.126A5.847 5.847 0 0 0 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227a3.81 3.81 0 0 1-.899 1.382 3.744 3.744 0 0 1-1.38.896c-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421a3.716 3.716 0 0 1-1.379-.899 3.644 3.644 0 0 1-.9-1.38c-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 1 0 0-12.324zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405a1.441 1.441 0 0 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"></path>
+                </svg>
+              </span>
+            </a></div>
+        </div>
+        <div class='header__donate'>
+          <a href="https://aeon.co/donate?utm_medium=web&amp;utm_source=top-bar">Donate</a>
+          <span class='header__separator separator'>/&nbsp;</span>
+        </div>
+        <div class='header__newsletter'>
+          <a href='#' onclick='document.body.classList.toggle(&#39;modal-newsletter--open&#39;); return false;'>
+            Newsletter
+          </a>
+        </div>
+        <span class='header__separator separator'>&nbsp;/</span>
+        <div class='header__user header__user--anonymous'>
+          <div class='user-nav'>
+            <a class='header__sign-in' href='https://aeon.co/sign-in' title='Sign In'>
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                <g>
+                  <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1c0 .55.45 1 1 1h14c.55 0 1-.45 1-1v-1c0-2.66-5.33-4-8-4z"></path>
+                </g>
+              </svg>
+
+              <span>Sign In</span>
+            </a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class='modal-friends'>
+    <div class='friends-save'>
+      <p class='friends-save__title'>Become a Friend of Aeon to save articles and enjoy other exclusive benefits</p>
+      <a class='friends-save__big-button' href='https://aeon.co/donate?theme=friends&amp;utm_medium=web&amp;utm_source=friends-preview'>Make
+        a donation</a>
+      <span class='dropdown__triangle'></span>
+    </div>
+
+    <a class='close-cover' href='#' onclick='document.body.classList.remove(&#39;friends-modal--open&#39;); return false;'></a>
+  </div>
+  <div class='modal-newsletter'>
+    <div class='newsletter-signup'>
+      <span data-react-class="Aeon.NewsletterSignup" data-react-props="{&quot;newsletter_source&quot;:&quot;newsletter-signup-header&quot;}"></span>
+    </div>
+
+    <a class='close-cover' href='#' onclick='document.body.classList.remove(&#39;modal-newsletter--open&#39;); document.body.classList.remove(&#39;open--faq&#39;); return false;'></a>
+  </div>
+  <div class='modal-newsletter-faq'>
+    <div class='faq newsletter_faq'>
+      <div class='faq__content'>
+        <a class='faq__close-icon' href='' onclick='document.body.classList.remove(&#39;open--newsletter-faq&#39;); return false;'>&times;</a>
+        <div class='faq__header'>Newsletter Privacy Policy</div>
+        <p>Aeon email newsletters are issued by the not-for-profit, registered charity Aeon Media Group Ltd (Australian
+          Business Number 80 612 076 614). This Email Newsletter Privacy Statement pertains to the personally
+          identifying information you voluntarily submit in the form of your email address to receive our email
+          newsletters</p>
+        <p>More generally, when visiting the Aeon site you should refer to our site Privacy Policy <a href="https://aeon.co/privacy">here</a>.</p>
+        <p>This Email Newsletter Privacy Statement may change from time to time and was last revised 5 June, 2018.</p>
+        <p>By clicking ‘Subscribe’ you agree to the following:</p>
+        <ul>
+          <li>We will use the email address you provide to send you daily and/or weekly email (depending on your
+            selection). We also send occasional donation requests and, no more than once a year, reader surveys.</li>
+          <li>The email address/es you provide will be transferred to our external marketing automation service
+            ‘MailChimp’ for processing in accordance with their <a href="https://mailchimp.com/legal/privacy/?_ga=2.37985569.369556906.1526884532-1949438781.1481075689">Privacy
+              Policy</a> and <a href="https://mailchimp.com/legal/terms/?_ga=2.51018027.369556906.1526884532-1949438781.1481075689">Terms</a>.
+            We use MailChimp to issue our newsletters, donation requests and reader surveys. We have no control over,
+            and assume no responsibility for, the conduct, practices or privacy policies of MailChimp.</li>
+        </ul>
+        <p><strong>Unsubscribing</strong></p>
+        <p>You can change your mind at any time by clicking the ‘unsubscribe link’ in the footer of emails you receive
+          from us, or by contacting us at <a href="mailto:support@aeon.co">support@aeon.co</a>&nbsp;</p>
+        <p>If you want to review and correct the personal information we have about you, you can click on ‘update
+          preferences’ in the footer of emails you receive from us, or by contacting us at <a href="mailto:support@aeon.co">support@aeon.co</a></p>
+        <p><strong>Security of your personal information</strong></p>
+        <p>We are committed to ensuring that your information is secure. We have taken reasonable measures to protect
+          information about you from loss, theft, misuse or unauthorised access, disclosure, alteration and
+          destruction. No physical or electronic security system is impenetrable however and you should take your own
+          precautions to protect the security of any personally identifiable information you transmit. We cannot
+          guarantee that the personal information you supply will not be intercepted while transmitted to us or our
+          marketing automation service Mailchimp.</p>
+        <p><strong>Sharing your personal information&nbsp;</strong></p>
+        <p>We will not disclose your personal information except: (1) as described by this <a href="https://aeon.co/privacy"
+            rel="">Privacy Policy </a>(2) after obtaining your permission to a specific use or disclosure or (3) if we
+          are required to do so by a valid legal process or government request (such as a court order, a search
+          warrant, a subpoena, a civil discovery request, or a statutory requirement). We will retain your information
+          for as long as needed in light of the purposes for which is was obtained or to comply with our legal
+          obligations and enforce our agreements.</p>
+        <p><strong>Access to your personal information</strong></p>
+        <p>You may request a copy of the personal information we hold about you by submitting a written request to <a
+            href="mailto:support@aeon.co">support@aeon.co</a> We may only implement requests with respect to the
+          personal information associated with the particular email address you use to send us the request. We will try
+          and respond to your request as soon as reasonably practical. When you receive the information, if you think
+          any of it is wrong or out of date, you can ask us to change or delete it for you.</p>
+        <p><br></p>
+      </div>
+      <a class='faq__close close-cover' href='' onclick='document.body.classList.remove(&#39;open--newsletter-faq&#39;); return false;'></a>
+    </div>
+
+  </div>
+  <div data-react-class="Aeon.Flash" data-react-props="{&quot;type&quot;:null,&quot;message&quot;:null}"></div>
+
+  <h1 class='channel-title'>Essays</h1>
+  <p class='centred'>
+    <a class="button-toggle  button-toggle--selected" href="https://aeon.co/essays">Latest</a>
+    <a class="button-toggle " href="https://aeon.co/essays/popular">Popular</a>
+  </p>
+  <br>
+  <div class='article-list--col-3 article-list--list article-list__wrapper'>
+    <div class='article-list container'>
+      <article class='article-card article-card--col-3 article-card--section-culture audio' data-align-x='left'
+        data-align-y='bottom' data-backdrop-strength='1' data-id='3040' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3040}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/b7336853-9cac-4437-ad37-67f330f9c58f/card_essay-gettyimages-563421791.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3040,&quot;url&quot;:&quot;https://aeon.co/essays/3040/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Stories &amp; Literature</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/can-there-ever-be-another-novel-like-the-satanic-verses">Islam
+                    after Salman</a>
+                  <h2 class='article-card__standfirst'>
+                    The Satanic Verses would not be written or published today. What’s changed since Salman Rushdie’s
+                    notorious novel?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Bruce Fudge</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/can-there-ever-be-another-novel-like-the-satanic-verses"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='0' data-id='3041' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3041}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/7ef8f289-30d9-47b0-bb81-8f10688d8ccc/card_essay-1050013.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3041,&quot;url&quot;:&quot;https://aeon.co/essays/3041/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>History of Ideas</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/how-aristotles-example-can-help-public-philosophy-today">Speak
+                    to the shoemaker</a>
+                  <h2 class='article-card__standfirst'>
+                    Philosophy need not be arcane, argued Aristotle, as he led by example, writing treatises for peers
+                    and public alike
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Edith Hall</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/how-aristotles-example-can-help-public-philosophy-today"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-science audio' data-align-x='center'
+        data-align-y='center' data-backdrop-strength='3' data-badge-color='white' data-id='3051' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3051}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/41877a12-c62f-485c-bc41-d0f80316853e/card_essay-final-c0293218-bone_tissue_sem-spl.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3051,&quot;url&quot;:&quot;https://aeon.co/essays/3051/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Genetics</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/the-revolutionary-idea-revealing-the-bodys-hormonal-democracy">Hormones
+                    united</a>
+                  <h2 class='article-card__standfirst'>
+                    The hormone system works like a democracy: every tissue in the body is an endocrine organ asserting
+                    its needs and demands
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Liam Drew</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/the-revolutionary-idea-revealing-the-bodys-hormonal-democracy"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-science audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='0' data-id='3048' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3048}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/e155b2d3-72e0-4ab2-9ffb-a0556a806efb/card_essay-18301u.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3048,&quot;url&quot;:&quot;https://aeon.co/essays/3048/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>History of Science</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/when-geology-left-solid-ground-how-mountains-came-to-be">How
+                    to make mountains</a>
+                  <h2 class='article-card__standfirst'>
+                    In living memory, geologists believed that the Earth was slowly shrivelling, little guessing how
+                    vibrantly alive it truly is
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Marcia Bjornerud</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/when-geology-left-solid-ground-how-mountains-came-to-be"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-psychology audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='3' data-id='3042' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3042}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/435c9d7d-66a6-4da1-8b89-fa0cf86e6e4c/card_essay-gettyimages-1039771404.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3042,&quot;url&quot;:&quot;https://aeon.co/essays/3042/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Childhood &amp; Adolescence</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/when-a-parent-dies-by-suicide-how-are-the-children-told">The
+                    telling</a>
+                  <h2 class='article-card__standfirst'>
+                    When a parent dies by suicide, how the children are told casts a permanent shadow on their
+                    understanding of life and loss
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Jesse Bering</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/when-a-parent-dies-by-suicide-how-are-the-children-told"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='right'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='3037' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3037}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/7e98ab92-5553-4bab-869c-8a85f96dedea/card_essay-rtx2fkln.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3037,&quot;url&quot;:&quot;https://aeon.co/essays/3037/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Education</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/how-elite-education-promotes-diversity-without-difference">Engines
+                    of democracy</a>
+                  <h2 class='article-card__standfirst'>
+                    Society will be much improved by loosening the stranglehold of top universities on the education of
+                    elites. But how?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Jennifer M Morton</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/how-elite-education-promotes-diversity-without-difference"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='center'
+        data-align-y='center' data-backdrop-strength='3' data-badge-color='white' data-id='3036' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3036}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/25ea945e-ea0f-423a-8340-9ceb9877f0f6/card_essay-6946.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3036,&quot;url&quot;:&quot;https://aeon.co/essays/3036/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Religion</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/why-did-an-ancient-egyptian-king-erase-all-gods-but-aten">The
+                    first God</a>
+                  <h2 class='article-card__standfirst'>
+                    Out of the many gods of ancient Egypt an inspired Pharaoh created a monotheistic faith. What was
+                    Atenism and why did it fail?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>James K Hoffmeier</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/why-did-an-ancient-egyptian-king-erase-all-gods-but-aten"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='3' data-id='3030' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3030}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/43d96b3d-158e-41e7-a2c4-e2370a8dbebd/card_essay-final-nyc31674.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3030,&quot;url&quot;:&quot;https://aeon.co/essays/3030/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Anthropology</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/does-laughter-hold-the-key-to-human-consciousness">Did
+                    laughter make the mind?</a>
+                  <h2 class='article-card__standfirst'>
+                    A psychological relief valve and a guard against despotism, laughter is a uniquely human – and
+                    collective – activity
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Chris Knight</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/does-laughter-hold-the-key-to-human-consciousness"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='1' data-id='3027' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3027}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/dfb84636-7a61-417a-8983-1ea4b3c72bad/card_essay-unicorn_0025.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3027,&quot;url&quot;:&quot;https://aeon.co/essays/3027/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Knowledge</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/can-a-philosopher-explain-reality-and-make-believe-to-a-child">The
+                    why of reality</a>
+                  <h2 class='article-card__standfirst'>
+                    What makes a dinosaur real, but a unicorn unreal? Does philosophy even pretend to know how to
+                    answer a child’s questions?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Nathanael Stein</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/can-a-philosopher-explain-reality-and-make-believe-to-a-child"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-culture audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='1' data-id='3028' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3028}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/7da7ebb8-723c-4eb6-b981-6a1208fe4efc/card_essay-gettyimages-163553885.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3028,&quot;url&quot;:&quot;https://aeon.co/essays/3028/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Cultures &amp; Languages</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/in-the-beginning-was-the-word-and-the-word-was-embodied">Words
+                    as feelings</a>
+                  <h2 class='article-card__standfirst'>
+                    A special class of vivid, textural words defies linguistic theory: could &#8216;ideophones&#8217;
+                    unlock the secrets of humans’ first utterances?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>David Robson</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/in-the-beginning-was-the-word-and-the-word-was-embodied"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='3' data-id='3026' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3026}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://omicron.aeon.co/images/8f08117f-90e1-4a72-abb0-dd7639d8ff22/card_essay-final-par449551.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3026,&quot;url&quot;:&quot;https://aeon.co/essays/3026/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Poverty &amp; Development</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/disaster-relief-as-a-threat-to-state-sovereignty">After
+                    the storm</a>
+                  <h2 class='article-card__standfirst'>
+                    Few things tell us more about the nature of state sovereignty, and the threats to it, than the
+                    politics of disaster relief
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Saptarishi Bandopadhyay</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/disaster-relief-as-a-threat-to-state-sovereignty"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='right'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='3013' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3013}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/df007e3e-d04a-4072-b5a2-cb14b2157080/card_essay-v2-gettyimages-980961-001.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3013,&quot;url&quot;:&quot;https://aeon.co/essays/3013/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Philosophy of Language</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/consent-and-refusal-are-not-the-only-talking-points-in-sex">Sex
+                    talks</a>
+                  <h2 class='article-card__standfirst'>
+                    The language of sexual negotiation must go far beyond &#8216;consent&#8217; and
+                    &#8216;refusal&#8217; if we are to foster ethical, autonomous sex
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Rebecca Kukla</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/consent-and-refusal-are-not-the-only-talking-points-in-sex"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='3' data-id='3000' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3000}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/f67ba591-bb33-4ba1-9dce-1704bf82ff8f/card_essay739289003.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3000,&quot;url&quot;:&quot;https://aeon.co/essays/3000/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Rituals &amp; Celebrations</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/how-rituals-can-protect-life-with-a-petal-and-a-prayer">Daily
+                    grace</a>
+                  <h2 class='article-card__standfirst'>
+                    Everyday rituals are ephemeral prayers, a hint to the gods for protection, encircling life like a
+                    fragrant garland
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Jay Griffiths</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/how-rituals-can-protect-life-with-a-petal-and-a-prayer"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='0' data-id='3008' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3008}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://omicron.aeon.co/images/139eb38b-9771-4fcc-809c-d1ed49f841a4/card_essay-rexfeatures_6199856d.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3008,&quot;url&quot;:&quot;https://aeon.co/essays/3008/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Law &amp; Justice</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/why-is-there-still-stigma-attached-to-a-virus-we-can-control">Purity
+                    rules</a>
+                  <h2 class='article-card__standfirst'>
+                    It is difficult to catch and straightforward to treat. So why does society still shame and punish
+                    people infected with HIV?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Rose George</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/why-is-there-still-stigma-attached-to-a-virus-we-can-control"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='right'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='3012' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3012}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/24cd3669-89fd-4b68-83d6-23fc7359bdca/card_essay-final-lon8942.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3012,&quot;url&quot;:&quot;https://aeon.co/essays/3012/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>History of Ideas</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/what-existentialist-philosophy-reveals-about-prejudices">Against
+                    type</a>
+                  <h2 class='article-card__standfirst'>
+                    The existentialist philosophies of Simone de Beauvoir and Frantz Fanon offer important insights
+                    into the nature of prejudice
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Jonathan Webber</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/what-existentialist-philosophy-reveals-about-prejudices"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='left'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='3006' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3006}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/01ee4c23-22e6-4010-a1ef-3f77602dc2a0/card_v2-essay-gettyimages-498271836.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3006,&quot;url&quot;:&quot;https://aeon.co/essays/3006/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Philosophy of Science</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/its-time-for-a-robust-philosophical-defence-of-truth-in-science">Getting
+                    it right</a>
+                  <h2 class='article-card__standfirst'>
+                    Truth is neither absolute nor timeless. But the pursuit of truth remains at the heart of the
+                    scientific endeavour
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Michela Massimi</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/its-time-for-a-robust-philosophical-defence-of-truth-in-science"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='3' data-id='2990' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2990}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/41646bd3-6cef-4dc9-b297-245cb367dcdb/card_essay-nyc154352.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2990,&quot;url&quot;:&quot;https://aeon.co/essays/2990/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Philosophy of Mind</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/how-buddhism-resolves-the-paradox-of-self-deception">Buddhism
+                    and self-deception</a>
+                  <h2 class='article-card__standfirst'>
+                    How can I logically manage to deceive myself? Buddhist thought offers a way out of the
+                    philosophical paradox
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Katie Javanaud</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/how-buddhism-resolves-the-paradox-of-self-deception"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='right'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='2989' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2989}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://omicron.aeon.co/images/ea9384f2-96b3-4948-b9db-3196fb3fc29b/card_essay-frank_final_b_w.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2989,&quot;url&quot;:&quot;https://aeon.co/essays/2989/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>History of Ideas</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/what-is-truth-on-ramsey-wittgenstein-and-the-vienna-circle">Philosophy
+                    must be useful</a>
+                  <h2 class='article-card__standfirst'>
+                    For Wittgenstein and the Vienna Circle, much of philosophy was mere nonsense. Then came Frank
+                    Ramsey’s pragmatic alternative
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Cheryl Misak</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/what-is-truth-on-ramsey-wittgenstein-and-the-vienna-circle"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-psychology audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='3' data-id='3002' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:3002}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/b5aa8bcb-bcfc-449d-b05a-aab6fb25895d/card_1500-larger-going-to-work-l-s-lowry.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:3002,&quot;url&quot;:&quot;https://aeon.co/essays/3002/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Self-Improvement</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/dont-quit-your-day-job-the-benefits-of-being-a-bifurcator">The
+                    creed of compromise</a>
+                  <h2 class='article-card__standfirst'>
+                    Don&#8217;t throw in the day job to follow your dream. Join the bifurcators who juggle work-for-pay
+                    and their work-for-love
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Thomas Maloney</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/dont-quit-your-day-job-the-benefits-of-being-a-bifurcator"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-psychology audio' data-align-x='right'
+        data-align-y='bottom' data-backdrop-strength='2' data-id='2999' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2999}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/a6bc3c0f-c381-47e7-914f-ea6ebaee304d/card_essay-09-tmoh-col-600.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2999,&quot;url&quot;:&quot;https://aeon.co/essays/2999/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Consciousness &amp; Altered States</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/can-a-vow-of-silence-last-forever-the-paradox-of-thomas-merton">Disturbing
+                    the silence</a>
+                  <h2 class='article-card__standfirst'>
+                    The writer and Trappist monk Thomas Merton embodied a paradox, chasing both the purity of silence
+                    and the need to break it
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Jane Brox</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/can-a-vow-of-silence-last-forever-the-paradox-of-thomas-merton"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-psychology audio' data-align-x='left'
+        data-align-y='bottom' data-backdrop-strength='0' data-id='2994' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2994}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/c4abd6bd-0b2e-42d7-b956-12c976726523/card_essay-nn11526651.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2994,&quot;url&quot;:&quot;https://aeon.co/essays/2994/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Family Life</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/the-devotion-of-the-human-dad-separates-us-from-other-apes">The
+                    marvel of the human dad</a>
+                  <h2 class='article-card__standfirst'>
+                    Among our close animal relatives, only humans have involved and empathic fathers. Why did evolution
+                    favour the devoted dad?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Anna Machin</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/the-devotion-of-the-human-dad-separates-us-from-other-apes"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-technology audio' data-align-x='left'
+        data-align-y='center' data-backdrop-strength='3' data-id='2985' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2985}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/2bcee087-2376-4591-8bae-770d0a8d50da/card_essay-newgettyimages-976352124.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2985,&quot;url&quot;:&quot;https://aeon.co/essays/2985/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Technology &amp; the Self</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/what-would-a-world-without-pushbuttons-look-like">Who
+                    pushes the button?</a>
+                  <h2 class='article-card__standfirst'>
+                    From elevators to iPhones, the rise of pushbuttons has provoked a century of worries about losing
+                    the human touch
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Rachel Plotnick</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/what-would-a-world-without-pushbuttons-look-like"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='0' data-id='2984' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2984}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/566b9702-29e8-47d9-8004-cc00562ac679/card_essay-emmausgangersvanmeegeren1937.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2984,&quot;url&quot;:&quot;https://aeon.co/essays/2984/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Beauty &amp; Aesthetics</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/how-experimental-psychology-can-help-us-understand-art">Whys
+                    of seeing</a>
+                  <h2 class='article-card__standfirst'>
+                    Experimental psychology is providing concrete answers to some of the great philosophical debates
+                    about art and its meaning
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Ellen Winner</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/how-experimental-psychology-can-help-us-understand-art"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='right'
+        data-align-y='top' data-backdrop-strength='0' data-id='2987' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2987}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/072d1fc7-fe3b-45fb-a650-fa937e31471b/card_essay-lon150970.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2987,&quot;url&quot;:&quot;https://aeon.co/essays/2987/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Work</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/no-boss-no-thanks-why-managers-are-more-important-than-ever">No
+                    boss? No thanks</a>
+                  <h2 class='article-card__standfirst'>
+                    Far from making them obsolete, the flatter business organisations of today need managers more than
+                    ever but in new ways
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Nicolai Foss & Peter Klein</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/no-boss-no-thanks-why-managers-are-more-important-than-ever"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-culture audio' data-align-x='center'
+        data-align-y='bottom' data-backdrop-strength='0' data-id='2965' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2965}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/104fdb31-8fcb-47d6-b45a-bfff15d65638/card_essay-gettyimages-587488504.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2965,&quot;url&quot;:&quot;https://aeon.co/essays/2965/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Stories &amp; Literature</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/the-ancient-greek-rebel-leader-who-saw-socrates-solo-dancing">As
+                    Xenophon saw it</a>
+                  <h2 class='article-card__standfirst'>
+                    Brilliant leader, kind horseman and friend of Socrates: Xenophon&#8217;s writings inspire a humane,
+                    practical approach to life
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Eve Browning</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/the-ancient-greek-rebel-leader-who-saw-socrates-solo-dancing"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='center'
+        data-align-y='top' data-backdrop-strength='3' data-id='2968' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2968}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/6e423de6-fc04-47f5-9c0b-50408ac8b5f5/card_essay-gettyimages-50605770.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2968,&quot;url&quot;:&quot;https://aeon.co/essays/2968/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Economics</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/development-as-a-chapter-in-the-moral-tale-of-economics">Economics
+                    as a moral tale</a>
+                  <h2 class='article-card__standfirst'>
+                    The development sector set out to summon the magic of capitalism from the ashes of communism. How
+                    is it going?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>John Rapley</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/development-as-a-chapter-in-the-moral-tale-of-economics"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-science audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='0' data-id='2963' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2963}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/04e96647-fe9b-4d03-865a-68d820071fb8/card_new-edit-essay-gettyimages-526259718.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2963,&quot;url&quot;:&quot;https://aeon.co/essays/2963/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Philosophy of Science</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/the-blind-spot-of-science-is-the-neglect-of-lived-experience">The
+                    blind spot</a>
+                  <h2 class='article-card__standfirst'>
+                    It&#8217;s tempting to think science gives a God&#8217;s-eye view of reality. But we forget the
+                    place of human experience at our peril
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Adam Frank, Marcelo Gleiser & Evan Thompson</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/the-blind-spot-of-science-is-the-neglect-of-lived-experience"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-culture audio' data-align-x='center'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='2976' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2976}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://epsilon.aeon.co/images/77404063-bc68-49dc-b8e6-0ab71cab9f31/card_essay-final-r15epd.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2976,&quot;url&quot;:&quot;https://aeon.co/essays/2976/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Memoir</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/lost-innocence-the-children-whose-parents-joined-an-ashram">The
+                    lost children</a>
+                  <h2 class='article-card__standfirst'>
+                    The adults who joined Bhagwan&#8217;s ashram sought freedom, love and light. Many of their children
+                    found darkness instead
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Lily Dunn</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/lost-innocence-the-children-whose-parents-joined-an-ashram"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-society audio' data-align-x='left'
+        data-align-y='top' data-backdrop-strength='3' data-id='2960' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <span class='audio-corner audio-corner__top '>
+                <div class='audio-corner__button audio-corner__button--audio'>
+                  <div class='audio-corner__icon'><svg fill="#000000" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--play'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M8 5v14l11-7z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+                <div class='audio-corner__button audio-corner__button--pause'>
+                  <div class='audio-corner__icon'><svg fill="currentColor" height="24" viewBox="0 0 24 24" width="24">
+                      <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"></path>
+                      <path d="M0 0h24v24H0z" fill="none"></path>
+                    </svg>
+                  </div>
+                </div>
+              </span>
+
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2960}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://alpha.aeon.co/images/b675901e-adc1-4ac6-9b24-6c219556751d/card_essay-v1-rexfeatures_3758080a.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2960,&quot;url&quot;:&quot;https://aeon.co/essays/2960/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>Gender &amp; Sexuality</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/pickuptm-turns-romance-into-a-commodity-for-male-consumption">Seduction,
+                    Inc</a>
+                  <h2 class='article-card__standfirst'>
+                    The pickup industry mates market logic with the arts of seduction – turning human intimacy into
+                    hard labour
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Rachel O’Neill</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/pickuptm-turns-romance-into-a-commodity-for-male-consumption"></a>
+          </div>
+        </div>
+      </article>
+
+      <article class='article-card article-card--col-3 article-card--section-philosophy audio' data-align-x='center'
+        data-align-y='bottom' data-backdrop-strength='3' data-id='2958' data-playing='false'>
+        <div class='gutter gutter--outer'>
+          <div class='article-card__inner'>
+            <div class='article-card__image-wrap' data-image-loaded='false'>
+              <div data-react-class="Aeon.AnnotatedCorner" data-react-props="{&quot;id&quot;:2958}"></div>
+              <figure class='responsive-image' style='background-image: url(&#39;https://nu.aeon.co/images/5a9aba47-61cd-4004-bced-a4c3edb61baa/card_essay-final-121511828.jpg&#39;)'>
+                <div class='sizer__wrapper'>
+                  <div class='sizer'></div>
+                </div>
+              </figure>
+
+              <div class='article-card__overlay'>
+              </div>
+            </div>
+            <div class='article-card__contents'>
+              <div class='article-card__contents__wrap container'>
+                <div class='gutter gutter--inner'>
+                  <div class='article-card__meta'>
+                    <div class='article-card__save'>
+                      <div data-react-class="Aeon.Save" data-react-props="{&quot;id&quot;:2958,&quot;url&quot;:&quot;https://aeon.co/essays/2958/save&quot;}"></div>
+                    </div>
+                    <div class='article-card__class__wrapper'>
+                      <span class='article-card__class'>Essay<span class='article-card__separator separator'>/</span></span>
+                    </div><span class='article-card__topic'>History of Ideas</span>
+                  </div>
+                  <a class="article-card__title" href="/essays/atheists-vs-religious-belief-with-wittgenstein-on-the-stand">Wittgenstein
+                    and religion</a>
+                  <h2 class='article-card__standfirst'>
+                    In the case atheists vs religious belief, Ludwig Wittgenstein is called to the stand. Whose side
+                    does his testimony serve?
+                  </h2>
+                  <p class='article-card__authors'>
+                    <span class='article-card__authors__inner'>Stephen Law</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a class="article-card__link" href="/essays/atheists-vs-religious-belief-with-wittgenstein-on-the-stand"></a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+
+  <div data-react-class="Aeon.Pagination" data-react-props="{}"></div>
+
+  <footer class='footer'>
+    <div class='container footer__main'>
+      <div class='column footer__links'>
+        <div class='column'>
+          <div class='gutter'>
+            <nav class='footer__nav'>
+              <a href="https://aeon.co/essays">Essays</a>
+              <a href="https://aeon.co/ideas">Ideas</a>
+              <a href="https://aeon.co/videos">Videos</a>
+            </nav>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='gutter'>
+            <nav class='footer__nav'>
+              <a href="https://aeon.co/about">About</a>
+              <a href="https://aeon.co/contact">Contact</a>
+              <a href="https://aeon.co/partners">Partners</a>
+            </nav>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='gutter'>
+            <nav class='footer__nav'>
+              <a href="https://aeon.co/feed.rss">RSS Feed</a>
+              <a href="https://aeon.co/donate?utm_medium=web&amp;utm_source=footer">Donate</a>
+              <a href="https://aeon.co/community-guidelines">Community Guidelines</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class='column footer__social'>
+        <div class='gutter'>
+          <p>Follow Aeon</p>
+          <div>
+            <p class='footer__social--facebook'>
+              <div class="fb-like" data-href="https://www.facebook.com/AeonMagazine/" data-layout="button_count"
+                data-action="like" data-show-faces="false" data-share="false"></div>
+            </p>
+            <p class='footer__social--twitter'>
+              <a href="https://twitter.com/aeonmag" class="twitter-follow-button" data-show-count="false" data-size="default">Follow
+                @aeonmag</a>
+            </p>
+            <p class='footer__social--instagram'>
+              <span data-react-class="Aeon.InstagramFollow" data-react-props="{}"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class='column footer__newsletter'>
+        <div class='gutter'>
+          <div class='newsletter-signup'>
+            <span data-react-class="Aeon.NewsletterSignup" data-react-props="{&quot;newsletter_source&quot;:&quot;newsletter-signup-footer&quot;}"></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class='container footer__copyright'>
+      <div class='gutter'>
+        &copy; Aeon Media Group Ltd. 2012-2019.
+        <a href="https://aeon.co/privacy">Privacy Policy.</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <div id='modal'></div>
+  <script src="https://alpha.aeon.co/assets/packs/manifest-7ac52ee71d3530a0c124.js"></script>
+  <script src="https://alpha.aeon.co/assets/packs/common-8caea91764d654d56ba9.js"></script>
+  <script src="https://alpha.aeon.co/assets/packs/aeon-a29716dfee3be0346314.js"></script>
+  <div data-react-class="Aeon.SidebarTab" data-react-props="{&quot;friends_url&quot;:&quot;https://aeon.co/friends&quot;,&quot;is_friend&quot;:null}"></div>
+
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-45522988-1', 'auto');
+
+    ga('require', 'ecommerce');
+    ga('send', 'pageview');
+  </script>
+
+
+
+  <div id='fb-root'></div>
+  <script>
+    // facebook like button
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=430086400490662";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    // twitter follow button
+    ! function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        p = /^http:/.test(d.location) ? 'http' : 'https';
+      if (!d.getElementById(id)) {
+        js = d.createElement(s);
+        js.id = id;
+        js.src = p + '://platform.twitter.com/widgets.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }
+    }(document, 'script', 'twitter-wjs');
+  </script>
+</body>
+
+</html>

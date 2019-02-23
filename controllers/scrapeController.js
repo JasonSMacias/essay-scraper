@@ -1,5 +1,9 @@
 const db = require('../models');
 
+// require axios and cheerio for scraping
+var axios = require("axios");
+var cheerio = require("cheerio");
+
 module.exports = {
   scrape: function(req, res) {
     // First, we grab the body of the html with axios
