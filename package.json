@@ -1,7 +1,7 @@
 {
   "name": "essay-scraper",
   "version": "1.0.0",
-  "description": "",
+  "description": "A web app that scrapes essays from Aeon.co and allows users to post notes associated with individual articles. Uses Mongoose and Cheerio libraries.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
