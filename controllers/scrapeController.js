@@ -29,7 +29,13 @@ module.exports = {
         articleArr.push(result);
       
       });
-
+      db.Article.deleteMany({}, function(err) { 
+        console.log('collection removed') 
+        })
+        .catch(err => {
+          console.log(err);
+          res.json(err);
+        });
       db.Article.create(articleArr)
         .then(() => res.send("Scrape Complete"))
         .catch(err => {
