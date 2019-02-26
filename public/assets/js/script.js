@@ -34,8 +34,8 @@ $(document).ready(function() {
         console.log(articleData);
         articleInfo = articleData;
         currentArticleId = articleId;
-        $('#note-title-display').text("");
-        $('#note-body-display').text("");
+        $('#note-title-display').empty();
+        $('#note-body-display').empty();
         $('#article-link')
           .attr('href', 'https://aeon.co'+articleData.link)
           .text(articleData.title);
@@ -45,11 +45,15 @@ $(document).ready(function() {
         $('#note-body').val(articleData.note.body);
         $('#note-title').val(articleData.note.title);
           $('#submit-note').attr('data-id', articleData._id).attr("data-note-id", articleData.note._id);
-        $('#note-title-display').text(articleData.note.body);
-        $('#note-body-display').text(articleData.note.body);
+        displayNoteData(articleData.note);
         };
       });
     });
+  };
+
+  function displayNoteData(data){
+    $('#note-title-display').html(`<h5>Notes</h5><br /><strong>${data.title}</strong><br />`);
+    $('#note-body-display').html(`<em>${data.body}</em>`);
   };
 
   
@@ -71,6 +75,8 @@ $(document).ready(function() {
           .val()
           .trim()
       };
+
+      displayNoteData(noteData);
 
       $.ajax({
         url: `/articles/${articleId}`,
