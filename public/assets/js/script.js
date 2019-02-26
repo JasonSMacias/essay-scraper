@@ -11,8 +11,9 @@ $(document).ready(function() {
           .append(article.title)
           .attr('data-id', article._id)
           .appendTo($('#articles'));
-          submitListener();
+          
       });
+      submitListener();
     });
   }
 
@@ -28,13 +29,14 @@ $(document).ready(function() {
         method: 'GET'
       }).then(function(articleData) {
         console.log(articleData);
-        $('#submit-note').attr('data-id', articleData._id).attr("data-note-id", articleData.note._id);
         $('#article-link')
           .attr('href', 'https://aeon.co'+articleData.link)
           .text(articleData.title);
+        if (articleData.note){
         $('#note-body').val(articleData.note.body);
         $('#note-title').val(articleData.note.title);
-        
+          $('#submit-note').attr('data-id', articleData._id).attr("data-note-id", articleData.note._id);
+        };
       });
     });
   };
